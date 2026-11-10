@@ -1,0 +1,20 @@
+Ülesanne 3
+4
+20
+28
+16
+16
+Indeksid algavad nullist. Viimane indeks on len(arvud) - 1 ja eelviimane len(arvud) - 2.
+
+Ülesanne 6
+Indeks 1 annab teise elemendi. Esimese elemendi indeks on 0.
+Nelja elemendiga järjendi viimane indeks on 3. Indeks 4 põhjustab IndexError vea.
+Käsud tuleb kirjutada eraldi ridadele.
+
+Ülesanne 8
+['B', 'C', 'D']
+['A', 'B', 'C']
+['D', 'E', 'F']
+['D', 'E']
+['F', 'E', 'D', 'C', 'B', 'A']
+Viilu algusindeks kaasatakse, lõpuindeks jäetakse välja. Nii on viilu pikkus lõpu ja alguse vahe.

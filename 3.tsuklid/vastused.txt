@@ -1,0 +1,3 @@
+Ülesanne 36
+Programm prindib lõputult arvu 1, sest i väärtus ei muutu.
+Tsükli sees tuleb suurendada i väärtust ühe võrra.

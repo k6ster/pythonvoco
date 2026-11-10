@@ -1,0 +1,19 @@
+Ülesanne 1
+True
+True
+False
+True
+False
+False
+True
+False
+
+Ülesanne 2
+True
+True
+False
+False
+True
+
+Ülesanne 27
+18-aastane on samuti täisealine. Tingimus peab olema age >= 18.

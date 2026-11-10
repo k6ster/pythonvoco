@@ -1,0 +1,23 @@
+Ülesanne 1
+25: int
+"25": str
+25.0: float
+"25.0": str
+-10: int
+"Python": str
+0: int
+0.0: float
+
+Ülesanne 4
+8
+-8
+8.0
+25
+
+Ülesanne 27
+x väärtused ridade järel: 10, 15, 30, 26.
+Väljund: 26.
+
+Ülesanne 36
+input() tagastab teksti. Tekstile ei saa liita täisarvu 1.
+Vanus tuleb teisendada int() abil täisarvuks.
