@@ -1,9 +1,18 @@
-from urllib.request import urlopen
+from pathlib import Path
 
-try:
-    with urlopen("https://example.com/", timeout=5) as vastus:
-        read = vastus.read().decode("utf-8").splitlines()
-    for number, rida in enumerate(read[:10], 1):
-        print(number, rida)
-except OSError as viga:
-    print(f"Päring ebaõnnestus: {viga}")
+
+fail = Path(__file__).parent / "hinded.txt"
+opilased = []
+with open(fail, encoding="utf-8") as sisend:
+    for rida in sisend:
+        nimi, hinne = rida.split()
+        opilased.append((nimi, int(hinne)))
+
+hinded = [hinne for _, hinne in opilased]
+print(f"Keskmine hinne: {sum(hinded) / len(hinded):.2f}")
+print(f"Kõrgeim hinne: {max(hinded)}")
+print(f"Madalaim hinne: {min(hinded)}")
+print("Õpilased hindega vähemalt 4:")
+for nimi, hinne in opilased:
+    if hinne >= 4:
+        print(nimi)

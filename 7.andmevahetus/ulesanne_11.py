@@ -1,7 +1,14 @@
-from urllib.request import urlopen
+from pathlib import Path
+import re
 
-try:
-    with urlopen("https://example.com/", timeout=5) as vastus:
-        print(vastus.read().decode("utf-8")[:200])
-except OSError as viga:
-    print(f"Veebipäring ebaõnnestus: {viga}")
+
+sisend = Path(__file__).parent / "tekst.txt"
+with open(sisend, encoding="utf-8") as fail:
+    tekst = fail.read()
+sonad = re.findall(r"[^\W\d_]+", tekst, flags=re.UNICODE)
+if sonad:
+    pikim = max(sonad, key=len)
+    print(f"Kõige pikem sõna: {pikim}")
+    print(f"Sõna pikkus: {len(pikim)}")
+else:
+    print("Failis pole sõnu.")

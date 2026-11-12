@@ -1,4 +1,6 @@
 from pathlib import Path
 
-Path("naidis.txt").write_text("Esimene rida\nTeine rida\n", encoding="utf-8")
-print(Path("naidis.txt").read_text(encoding="utf-8"))
+
+sisend = Path(__file__).parent / "tervitus.txt"
+with open(sisend, encoding="utf-8") as fail:
+    print(fail.read())

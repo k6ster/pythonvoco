@@ -1,6 +1,7 @@
 from pathlib import Path
 
-Path("read.txt").write_text("üks\nkaks\nkolm\n", encoding="utf-8")
-with open("read.txt", encoding="utf-8") as fail:
-    for rida in fail:
-        print(rida.strip())
+
+sisend = Path(__file__).parent / "tervitus.txt"
+with open(sisend, encoding="utf-8") as fail:
+    for number, rida in enumerate(fail, start=1):
+        print(f"{number}: {rida.rstrip()}")

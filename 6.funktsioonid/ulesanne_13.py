@@ -1,4 +1,6 @@
-def keskmine(arvud):
-    return sum(arvud) / len(arvud)
+def summa(a, b):
+    return a + b
 
-print(keskmine([4, 5, 6]))
+
+tulemus = summa(8, 12)
+print(tulemus)

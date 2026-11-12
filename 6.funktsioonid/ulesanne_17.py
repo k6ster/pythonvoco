@@ -1,4 +1,9 @@
-def teisenda_eurodeks(sendid):
-    return sendid // 100, sendid % 100
+import math
 
-print(teisenda_eurodeks(1237))
+
+def ringi_pindala(raadius):
+    return math.pi * raadius ** 2
+
+
+for raadius in (2, 5, 10):
+    print(f"Raadius {raadius}: {ringi_pindala(raadius):.2f}")

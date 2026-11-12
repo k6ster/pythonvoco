@@ -1,5 +1,9 @@
 from pathlib import Path
 
-with open("logi.txt", "a", encoding="utf-8") as fail:
-    fail.write("Uus sissekanne\n")
-print(Path("logi.txt").read_text(encoding="utf-8"))
+
+sisend = Path(__file__).parent / "arvud.txt"
+with open(sisend, encoding="utf-8") as fail:
+    arvud = [int(rida) for rida in fail if rida.strip()]
+paaris = sum(arv % 2 == 0 for arv in arvud)
+print(f"Paarisarve: {paaris}")
+print(f"Paarituid arve: {len(arvud) - paaris}")

@@ -1,12 +1,6 @@
-def hinne(punktid):
-    if punktid >= 90:
-        return 5
-    if punktid >= 75:
-        return 4
-    if punktid >= 60:
-        return 3
-    if punktid >= 50:
-        return 2
-    return 1
+def celsius_fahrenheit(c):
+    return c * 9 / 5 + 32
 
-print(hinne(82))
+
+for kraadid in (0, 20, 37, 100):
+    print(f"{kraadid} °C = {celsius_fahrenheit(kraadid):.1f} °F")

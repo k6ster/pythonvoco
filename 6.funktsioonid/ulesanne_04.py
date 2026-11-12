@@ -1,4 +1,11 @@
-def ristkuliku_pindala(pikkus, laius):
-    return pikkus * laius
+def pealkiri():
+    print("--------------------")
+    print("PYTHONI HARJUTUSED")
+    print("--------------------")
 
-print(ristkuliku_pindala(5, 3))
+
+pealkiri()
+print("Ülesanne 1")
+pealkiri()
+print("Ülesanne 2")
+pealkiri()

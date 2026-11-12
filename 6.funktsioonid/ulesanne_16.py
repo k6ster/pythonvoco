@@ -1,4 +1,8 @@
-def loe_sonad(lause):
-    return len(lause.split())
+def teisenda_sekundid(sekundid):
+    tunnid = sekundid // 3600
+    minutid = sekundid % 3600 // 60
+    sekundid = sekundid % 60
+    return tunnid, minutid, sekundid
 
-print(loe_sonad("Python on lihtne keel"))
+
+print(teisenda_sekundid(3675))

@@ -1,8 +1,11 @@
 from pathlib import Path
 
-read = Path("arvud.txt")
-read.write_text("12\n8\n4\n32\n", encoding="utf-8")
-arvud = [int(x) for x in read.read_text(encoding="utf-8").split()]
-paaris = [str(x) for x in arvud if x % 2 == 0]
-Path("paarisarvud.txt").write_text("\n".join(paaris), encoding="utf-8")
-print(f"Kirjutati {len(paaris)} arvu")
+
+kaust = Path(__file__).parent
+sisend = kaust / "arvud.txt"
+valjund = kaust / "paarisarvud.txt"
+with open(sisend, encoding="utf-8") as fail:
+    arvud = [int(rida) for rida in fail if rida.strip()]
+paarisarvud = [arv for arv in arvud if arv % 2 == 0]
+valjund.write_text("".join(f"{arv}\n" for arv in paarisarvud), encoding="utf-8")
+print(f"Paarisarve kirjutati faili {len(paarisarvud)}.")

@@ -1,7 +1,6 @@
-def ruut(arv):
-    return arv ** 2
+def keskmine(a, b, c):
+    return (a + b + c) / 3
 
-def kuup(arv):
-    return arv ** 3
 
-print(ruut(3), kuup(3))
+vastus = keskmine(6, 9, 12)
+print(vastus * 2)

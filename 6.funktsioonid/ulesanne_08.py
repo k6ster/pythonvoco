@@ -1,4 +1,6 @@
-def paaris(arv):
-    return arv % 2 == 0
+def korda(arv, kogus):
+    for _ in range(kogus):
+        print(arv)
 
-print(paaris(int(input("Arv: "))))
+
+korda(7, 4)

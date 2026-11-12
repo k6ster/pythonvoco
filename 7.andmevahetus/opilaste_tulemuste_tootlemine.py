@@ -19,9 +19,10 @@ def loe_andmed(fail):
                 opilased.append((nimi, keskmine, hinne(keskmine)))
     return opilased
 
-sisend = Path("tulemused.txt")
+sisend = Path(__file__).with_name("tulemused.txt")
 if not sisend.exists():
-    sisend.write_text("Mari;85;92;78\nJüri;60;55;70\nAnna;95;88;91\nPeeter;40;52;48\n", encoding="utf-8")
+    print("Viga: lähtefaili tulemused.txt ei leitud.")
+    raise SystemExit
 
 opilased = loe_andmed(sisend)
 read = ["ÕPILASTE TULEMUSTE ARUANNE", "------------------------------"]
@@ -38,4 +39,4 @@ if opilased:
         f"Positiivse hindega õpilasi: {sum(x[2] >= 3 for x in opilased)}",
     ])
 print("\n".join(read))
-Path("aruanne.txt").write_text("\n".join(read), encoding="utf-8")
+Path(__file__).with_name("aruanne.txt").write_text("\n".join(read), encoding="utf-8")

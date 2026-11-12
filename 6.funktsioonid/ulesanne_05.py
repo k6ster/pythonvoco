@@ -1,5 +1,11 @@
-def tervitus(nimi="sõber"):
-    return f"Tere, {nimi}!"
+def joon():
+    print("**********")
 
-print(tervitus())
-print(tervitus("Mari"))
+
+def kast():
+    joon()
+    print("SISU")
+    joon()
+
+
+kast()

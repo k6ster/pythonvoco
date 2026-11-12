@@ -1,4 +1,6 @@
-def suurim(arvud):
-    return max(arvud)
+def kuva_hind(toode, hind, valuuta="€"):
+    print(f"{toode}: {hind:.2f} {valuuta}")
 
-print(suurim([3, 9, 2]))
+
+kuva_hind("Klaviatuur", 35)
+kuva_hind("Hiir", 20, "$")

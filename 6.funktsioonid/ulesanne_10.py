@@ -1,4 +1,6 @@
-def loe_tahti(sona):
-    return len(sona)
+def eraldaja(symbol, pikkus):
+    print(symbol * pikkus)
 
-print(loe_tahti(input("Sõna: ")))
+
+eraldaja("*", 8)
+eraldaja("-", 12)

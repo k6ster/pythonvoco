@@ -1,4 +1,7 @@
-def loenda_paaris(arvud):
-    return sum(arv % 2 == 0 for arv in arvud)
+def tervita(nimi, tervitus="Tere"):
+    print(f"{tervitus}, {nimi}!")
 
-print(loenda_paaris([1, 2, 4, 7, 8]))
+
+# Kui teist argumenti ei anta, kasutatakse tervituseks väärtust "Tere".
+tervita("Mari")
+tervita("Jaan", "Tere hommikust")

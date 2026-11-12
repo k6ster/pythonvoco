@@ -1,10 +1,13 @@
-from urllib.request import urlopen
 from pathlib import Path
 
-try:
-    with urlopen("https://example.com/", timeout=5) as vastus:
-        Path("veebitekst.txt").write_bytes(vastus.read())
-    read = Path("veebitekst.txt").read_text(encoding="utf-8").splitlines()
-    print(read[0], read[-1])
-except (OSError, UnicodeError) as viga:
-    print(f"Salvestamine ebaõnnestus: {viga}")
+
+fail = Path(__file__).parent / "ostunimekiri.txt"
+tooted = []
+while True:
+    toode = input("Sisesta toode (lõpetamiseks STOP): ").strip()
+    if toode.casefold() == "stop":
+        break
+    tooted.append(toode)
+
+fail.write_text("".join(f"{toode}\n" for toode in tooted), encoding="utf-8")
+print("Ostunimekiri salvestatud.")

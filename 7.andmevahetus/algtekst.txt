@@ -1,0 +1,10 @@
+Failidega töötamine on kasulik.
+Python oskab teksti failist lugeda.
+Andmeid saab salvestada ja hiljem uuesti kasutada.
+Iga rida sisaldab infot.
+Teksti saab muuta suurtähtedeks.
+Algset faili tuleb säilitada.
+Uus fail sisaldab muudetud teksti.
+Programm loeb kõik read.
+Seejärel kirjutab ta tulemuse.
+Nii õpime failidega töötamist.

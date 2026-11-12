@@ -1,9 +1,12 @@
-from urllib.request import urlopen
+from pathlib import Path
 
-otsitav = input("Otsitav sõna: ").casefold()
-try:
-    with urlopen("https://example.com/", timeout=5) as vastus:
-        tekst = vastus.read().decode("utf-8").casefold()
-    print(tekst.split().count(otsitav))
-except OSError as viga:
-    print(f"Päring ebaõnnestus: {viga}")
+
+fail = Path(__file__).parent / "algtekst.txt"
+tekst = fail.read_text(encoding="utf-8")
+read = tekst.splitlines()
+sonad = tekst.split()
+print(f"Ridu: {len(read)}")
+print(f"Sõnu: {len(sonad)}")
+print(f"Tähemärke: {len(tekst)}")
+print(f"Mittetühje ridu: {sum(bool(rida.strip()) for rida in read)}")
+print(f"Keskmiselt sõnu rea kohta: {len(sonad) / len(read):.2f}")

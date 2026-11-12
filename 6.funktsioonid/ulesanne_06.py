@@ -1,4 +1,11 @@
-def absoluutarv(arv):
-    return abs(arv)
+def tervitus():
+    print("Tere!")
 
-print(absoluutarv(-8))
+
+def lopp():
+    print("Head aega!")
+
+
+# Defineerimine loob funktsiooni, väljakutsumine käivitab selle.
+tervitus()
+lopp()

@@ -1,5 +1,12 @@
 from pathlib import Path
 
-Path("sonad.txt").write_text("koer kass koer lind", encoding="utf-8")
-sonad = Path("sonad.txt").read_text(encoding="utf-8").split()
-print(len(sonad), max(sonad, key=len))
+
+sisend = Path(__file__).parent / "tooted.txt"
+with open(sisend, encoding="utf-8") as fail:
+    tooted = [rida.strip() for rida in fail if rida.strip()]
+
+otsitav = input("Sisesta toode: ").strip().casefold()
+if any(toode.casefold() == otsitav for toode in tooted):
+    print("Toode leiti nimekirjast.")
+else:
+    print("Toodet ei leitud.")

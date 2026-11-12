@@ -1,4 +1,15 @@
-def korruta(a, b):
-    return a * b
+# Ennustus: Algus, C, A, B, D, Lõpp.
+def esimene():
+    print("A")
+    print("B")
 
-print(korruta(4, 6))
+
+def teine():
+    print("C")
+    esimene()
+    print("D")
+
+
+print("Algus")
+teine()
+print("Lõpp")

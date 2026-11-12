@@ -1,4 +1,6 @@
-def suurem(a, b):
-    return a if a > b else b
+def tervita(nimi):
+    print(f"Tere, {nimi}!")
 
-print(suurem(9, 4))
+
+tervita("Mari")
+tervita("Jaan")
